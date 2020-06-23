@@ -1,4 +1,4 @@
-FROM jboss/wildfly:10.1.0.Final
+FROM jboss/wildfly:20.0.0.Final
 
 RUN /opt/jboss/wildfly/bin/add-user.sh admin password --silent
 
