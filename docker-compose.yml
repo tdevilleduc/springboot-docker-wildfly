@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.8'
 
 services:
   wildfly:
@@ -12,10 +12,11 @@ services:
       - "9990:9990"
 
   mysql:
-    image: mysql:5.7.30
+    build:
+      context: ./docker/mysql
     restart: always
     environment:
-      MYSQL_DATABASE: 'db'
+      MYSQL_DATABASE: 'DEMO'
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'password'
       MYSQL_ROOT_PASSWORD: 'password'
